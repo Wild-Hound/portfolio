@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./MainNav.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faBars } from "@fortawesome/free-solid-svg-icons";
+import { menuBtnAct } from "./MainNavMech";
 
 function MainNav() {
   return (
@@ -35,6 +36,34 @@ function MainNav() {
           <a href="#" className={styles.Resume}>
             Download Resume <FontAwesomeIcon icon={faDownload} />
           </a>
+          <button
+            className={styles.menuBtn}
+            onClick={(e) => menuBtnAct(e, styles.subMenu)}
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+        </div>
+        <div id={styles.subMenu} style={{ display: "none" }}>
+          <ul className={styles.subLinks}>
+            <li className={styles.subLink}>
+              <a href="#">Home</a>
+            </li>
+            <li className={styles.subLink}>
+              <a href="#">Home</a>
+            </li>
+            <li className={styles.subLink}>
+              <a href="#">Home</a>
+            </li>
+            <li className={styles.subLink}>
+              <a href="#">Home</a>
+            </li>
+            <li className={styles.subLink}>
+              <a href="#">Home</a>
+            </li>
+            <li className={styles.resume}>
+              <a href="#">Download Resume</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

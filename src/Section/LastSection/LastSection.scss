@@ -1,0 +1,246 @@
+@import '../../Styles/BreakPoints.scss';
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+.contain-sec {
+  display: flex;
+  height: 100vh;
+  @include media('<desktop'){
+    flex-direction: column-reverse;
+    height:inherit;
+    }
+  
+}
+
+/* -------------------------------------------------------------- */
+.info-coon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #373b40;
+  width: 100%;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+  @include media('<tablet'){
+    margin-bottom: 200px;
+    }
+}
+.card:hover {
+  transform: translateX(50%);
+  @include media('<tablet'){
+    transform: translateX(0%);
+    margin-bottom: 200px;
+    }
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  background-color: #373b40;
+  transition: 1s;
+}
+.card:hover .imgBox {
+  transform: rotateY(-180deg);
+  @include media('<tablet'){
+    transform: rotateY(0deg);
+    }
+}
+.card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.card .imgBox img:nth-child(1) {
+  transform: rotateY(180deg);
+  
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #31313a;
+  @include media('<tablet'){
+    position: relative;
+    height: fit-content;
+  }
+}
+.details .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.details .content h2 {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1em;
+  color: white;
+}
+.details .content h2 span {
+  color: #45f3ff;
+  font-size: 0.8em;
+}
+.details .content .social-icons {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+}
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 18px;
+  transform: 0.2s;
+}
+.social-icons a:hover {
+  background: #45f3ff;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+.conForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  width: 100%;
+}
+.formCon {
+  width: 80%;
+  padding: 20px;
+}
+.formCon h2 {
+  width: 100%;
+  color: #45f3ff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.formCon .row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 35px;
+}
+/* ----------------------------------------------- */
+.row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s all;
+}
+.row100 .inBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #45f3ff;
+}
+/* ----------------------------------------------- */
+.inBox input,
+.inBox textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+.inBox input + .text,
+.inBox textarea + .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.inBox input:focus + .text,
+.inBox input:valid + .text,
+.inBox textarea:focus + .text,
+.inBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.row100 .inBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #45f3ff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.inBox input:focus ~ .line,
+.inBox input:valid ~ .line,
+.inBox textarea:focus ~ .line,
+.inBox textarea:valid ~ .line {
+  height: 100%;
+}
+/* textare bottom */
+.messageIn {
+  height: 100px !important;
+}
+.inBox textarea {
+  height: 100%;
+  padding: 5px;
+  resize: none;
+}
+/* sub button */
+#conSubBtn {
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: #45f3ff;
+  color: #000;
+  font-size: 18px;
+  border-radius: 2px;
+}
