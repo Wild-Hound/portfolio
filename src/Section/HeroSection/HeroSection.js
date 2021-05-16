@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./HeroSection.module.scss";
 import Typewriter from "typewriter-effect";
+import LastSection from "../LastSection/LastSection";
 
 function HeroSection() {
   const TypeWriterObj = new Typewriter("", {

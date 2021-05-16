@@ -2,6 +2,9 @@
 .heroWrapper{
     height: 100vh;
     position: relative;
+    @include media("<tablet"){
+        height: fit-content;
+    }
     .title{
         color: rgba(255,255,255, .80);
         font-size: 4.2vw;
@@ -26,10 +29,11 @@
         @include media('<tablet'){
         height: 60vw;
         width: 60vw;
-        top: -30vw;
+        margin-top: -30vw;
         left: 50%;
         font-size: 9.2vw;
         transform: translateX(-50%);
+        position: relative;
         }
     }
     .devInfo{
@@ -37,7 +41,10 @@
         top: 60%;
         left: 3em;
         @include media('<tablet'){
-            top: 15%;
+            top: -3em;
+            position: relative;
+            left: 0;
+            padding: 1.5em;
         }
         >p{
             max-width: 45ch;
