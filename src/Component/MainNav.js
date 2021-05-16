@@ -21,16 +21,13 @@ function MainNav() {
               <a href="#">About</a>
             </li>
             <li className={styles.link}>
-              <a href="#">Resume</a>
-            </li>
-            <li className={styles.link}>
               <a href="#">Portfolio</a>
             </li>
             <li className={styles.link}>
-              <a href="#">Contact</a>
+              <a href="#">Blog</a>
             </li>
             <li className={styles.link}>
-              <a href="#">Blog</a>
+              <a href="#">Contact</a>
             </li>
           </ul>
           <a href="#" className={styles.Resume}>

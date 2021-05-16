@@ -7,7 +7,6 @@
 }
 .contain-sec {
   display: flex;
-  height: 100vh;
   @include media('<desktop'){
     flex-direction: column-reverse;
     height:inherit;
