@@ -2,6 +2,7 @@ import "./App.scss";
 import MainNav from "./Component/MainNav";
 import HeroSection from "./Section/HeroSection/HeroSection";
 import LastSection from "./Section/LastSection/LastSection";
+import SocialBar from "./Section/SocialBar/SocialBar";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <HeroSection />
           <LastSection />
         </div>
-        <div className="socialSideBar"></div>
+        <div className="socialSideBar">
+          <SocialBar />
+        </div>
       </div>
     </div>
   );
