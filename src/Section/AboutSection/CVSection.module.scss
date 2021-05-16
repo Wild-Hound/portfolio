@@ -1,0 +1,150 @@
+@import '../../Styles/BreakPoints.scss';
+.cvSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #03080a;
+    position: relative;
+    @include media('<desktop'){
+        height: inherit;
+    }
+    
+}
+.CV{
+    display: flex;
+    z-index: 2;
+    width: 90%;
+    @include media('<desktop'){
+        flex-direction: column;
+        height: inherit;
+        width: 100%;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+.cvHeader{
+    text-align: center;
+    background-color: #31313a;
+    border-radius: 5px;
+    color: white;
+    width: 25vw;
+    // min-width: 420px;
+    @include media('<1000px'){
+        min-width: 400px;
+    }
+    @include media('<400px'){
+        min-width: 100%;
+    }
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    @include media('<desktop'){
+        height: fit-content;
+    }
+
+    .headImg{
+        height: 325px;
+        background-image: url('../../Images/simple2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 48% 100%, 0 90%);    
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .headContent{
+        padding: 10px;
+        display: grid;
+        gap: .8em;
+        >h1,h3{
+            font-weight: 400;
+        }
+        >h1{
+            font-size: 2.25em;
+        }
+    }
+
+    .headBtnCon{
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        border-radius: 5px;
+        >button{
+            padding: 1em;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-top: 1px solid #555;
+            background-color: #31313a;
+            color: white;
+            font-size: 1.125em;
+            transition: all .5s;
+            &:nth-child(1){
+            border-right: 1px solid #555;
+            border-bottom-left-radius: 5px;
+            }
+            &:nth-child(2){
+            border-bottom-right-radius: 5px;
+            }
+            &:hover{
+                color: #45f3ff;
+            }
+        }
+        
+    }
+}
+
+.cvBody{
+    width: 35vw;
+    // min-width: 420px;
+    @include media('<1000px'){
+        min-width: 400px;
+    }
+    @include media('<400px'){
+        min-width: 100%;
+    }
+    height: 60vh;
+    background-color: #31313a;
+    margin: auto;
+    padding: 1.5em;
+    box-sizing: border-box;
+    color: white;
+    @include media('<desktop'){
+        overflow-y: scroll;
+        min-height: 350px;
+    }
+        
+}
+.cvBodySec{
+    >h2{
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: .6em;
+        position: relative;
+        &::after{
+            content: '';
+            height: 1px;
+            background: linear-gradient(75deg, rgba(119,119,119,1) 0%, rgba(49,49,58,1) 95%);
+            width: 100%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(ellipse at left,rgba(197,202,213,.15) 0%,rgba(255,255,255,0) 70%);
+        }
+    }
+    p{
+        margin-top: 2em;
+        font-size: 1.125em;
+        line-height: 2em;
+    }
+}
