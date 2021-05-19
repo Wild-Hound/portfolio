@@ -1,0 +1,78 @@
+@import '../../../Styles/BreakPoints.scss';
+.portfolioWrapper{
+    position: relative;
+    overflow-y: hidden;
+
+    .swiperWrapper{
+    max-width: 420px;
+    max-height: 236px;
+    @include media('<500px'){
+        max-width: 300px;
+        }
+    .swiperItem{
+        max-width: 420px;
+        max-height: 236px;
+        background-color: white;
+        @include media('<500px'){
+            max-width: 100%;
+        }
+        >img{
+            max-width: 420px;
+            height: 236px;
+            object-fit: cover;
+            object-position: top;
+            @include media('<500px'){
+                max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .buttonWrapper{
+        width: 100%;
+        position: absolute;
+        top: 150%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,0.75) 50%, rgba(255,255,255,0) 100%);
+        transition: all .5s;
+
+        >button{
+            border: none;
+            font-size: 1.25em;
+            padding: .35em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            
+        }
+        #github{
+            border: 1px solid #e93b81;
+            color: #e93b81;
+            transition: all .35s;
+            &:hover{
+                color: white;
+                background-color: #e93b81;
+            }
+        }
+        #live{
+            border: 1px solid #1eae98;
+            color: #1eae98;
+            transition: all .35s;
+            &:hover{
+                color: white;
+                background-color: #1eae98;
+            }
+        }
+    }
+    &:hover .buttonWrapper{
+        top: 65%;
+    }
+}
