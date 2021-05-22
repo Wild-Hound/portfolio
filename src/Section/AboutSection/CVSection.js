@@ -3,7 +3,8 @@ import styles from "./CVSection.module.scss";
 
 function CVSection() {
   return (
-    <>
+    <div className={styles.parentWrapper}>
+      <h1 className="secHeader">About Me</h1>
       <div className={styles.cvSection}>
         <div className={styles.CV}>
           <div className={styles.cvHeader}>
@@ -36,7 +37,7 @@ function CVSection() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,40 @@
+@import '../../Styles/BreakPoints.scss';
+
 .portfolioWrapper{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     padding: 1.5em;
     gap: 1em;
     flex-wrap: wrap;
+    .tagWrapper{
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em;
+        >button{
+            font-size: 1.25em;
+            padding: 5px 10px;
+            background-color: transparent;
+            color: #45f3ff;
+            border: 1px solid #45f3ff;
+            outline: none;
+            cursor: pointer;
+            min-width: fit-content;
+            transition: all .35s;
+            &:hover{
+                background-color: #45f3ff;
+                color: white;
+            }
+            @include media("<500px"){
+                font-size: 1em;
+            }
+        }
+    }
+    .ItemWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+    }
 }

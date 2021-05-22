@@ -1,10 +1,17 @@
 @import '../../Styles/BreakPoints.scss';
+
+.parentWrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
 .cvSection{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #03080a;
     position: relative;
     @include media('<desktop'){
         height: inherit;
