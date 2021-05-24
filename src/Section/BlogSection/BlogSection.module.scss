@@ -1,0 +1,9 @@
+@import '../../Styles/BreakPoints.scss';
+.blogWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5em;
+    justify-content: center;
+    padding: 5em 0;
+    
+}

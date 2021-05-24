@@ -1,6 +1,7 @@
 import "./App.scss";
 import MainNav from "./Component/MainNav";
 import CVSection from "./Section/AboutSection/CVSection";
+import BlogSection from "./Section/BlogSection/BlogSection";
 import HeroSection from "./Section/HeroSection/HeroSection";
 import LastSection from "./Section/LastSection/LastSection";
 import PortfolioSection from "./Section/PortfolioSection/PortfolioSection";
@@ -18,6 +19,7 @@ function App() {
           <HeroSection />
           <PortfolioSection />
           <CVSection />
+          <BlogSection />
           <LastSection />
         </div>
         <div className="socialSideBar">
