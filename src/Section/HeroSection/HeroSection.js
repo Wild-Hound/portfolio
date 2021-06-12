@@ -1,15 +1,11 @@
 import React from "react";
 import styles from "./HeroSection.module.scss";
 import Typewriter from "typewriter-effect";
-import LastSection from "../LastSection/LastSection";
+import resume from "../../Images/yasin_khan.pdf";
 
 function HeroSection() {
-  const TypeWriterObj = new Typewriter("", {
-    strings: ["Hello", "World"],
-    autoStart: true,
-  });
   return (
-    <div className={styles.heroWrapper}>
+    <div className={styles.heroWrapper} id="hero">
       <div className={styles.title}>
         <span>
           Yasin <br /> Khan
@@ -41,12 +37,16 @@ function HeroSection() {
           }}
         />
         <p>
-          Hello! I am Web Developer from United States, New York. I have rich
-          experience in web site design and building, also I am good at
-          wordpress. I love to talk with you about our unique.
+          I am a self-taught javascript developer targeting clean code, best
+          practices, and good communications skills to work in a team-oriented
+          environment effectively
+          <br />
+          <br />
+          You may reach me by email, linkedin, whatsapp or follow me on github
+          :)
         </p>
         <div>
-          <a href="#" className={styles.resume}>
+          <a href={resume} target="_blank" className={styles.resume}>
             Resume
           </a>
         </div>

@@ -1,70 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import './Styles/BreakPoints.scss';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./Styles/BreakPoints.scss";
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
-.App{
+.App {
+  position: relative;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 85px;
+  @include media("<1100px") {
+    grid-template-columns: 1fr 2fr 85px;
+  }
+  @include media("<tablet") {
+    grid-template-columns: 1fr;
+  }
+}
+.heroImg {
+  background-color: #45f3ff;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  @include media("<tablet") {
     position: relative;
+    height: 55vh;
+  }
+  > div {
+    background-image: url("./Images/heroImg2.jpg");
+    height: 100%;
+    mix-blend-mode: luminosity;
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
-.wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1.25fr 85px;
-    @include media('<1100px'){
-        grid-template-columns: 1fr 2fr 85px;
-    }
-    @include media('<tablet'){
-        grid-template-columns: 1fr;
-    }
+.mainContent {
+  background-color: #1d1d1d;
 }
-.heroImg{
-    background-color: #45f3ff;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    @include media("<tablet"){
-        position: relative;
-        height: 55vh;
-    }
-    >div{
-        background-image: url('./Images/heroImg2.jpg');
-        height: 100%;
-        mix-blend-mode: luminosity;
-        filter: grayscale(100%);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
+.socialSideBar {
+  background-color: #1d1d1d;
+  height: 100vh;
+  width: 84px;
+  position: sticky;
+  top: 0;
+  border-left: 1px solid #999;
+  @include media("<tablet") {
+    height: 84px;
+    width: 100%;
+    position: relative;
+    border-left: none;
+    border-top: 1px solid #999;
+  }
 }
-.mainContent{
-    background-color: #1d1d1d;
-}
-.socialSideBar{
-    background-color: #1d1d1d;
-    height: 100vh;
-    width: 84px;
-    position: sticky;
-    top: 0;
-    border-left:1px solid #999 ;
-    @include media("<tablet"){
-        height: 84px;
-        width: 100%;
-        position: relative;
-        border-left:none ;
-        border-top: 1px solid #999;
-    }
-}
-.Typewriter{
-    font-size: 1.5em;
-    color: #45f3ff;
-    display: block;
-    margin-bottom: 1em;
+.Typewriter {
+  font-size: 1.5em;
+  color: #45f3ff;
+  display: block;
+  margin-bottom: 1em;
 }
 
-.secHeader{
-    width: 100%;
-    color: #45f3ff;
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 10px;
+.secHeader {
+  width: 100%;
+  color: #45f3ff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
 }

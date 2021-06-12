@@ -1,160 +1,197 @@
-@import '../../Styles/BreakPoints.scss';
+@import "../../Styles/BreakPoints.scss";
 
-.parentWrapper{
-    min-height: 100vh;
-    display: flex;
+.parentWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.cvSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include media("<desktop") {
+    height: inherit;
+  }
+  @include media("<500px") {
+    width: 100%;
+  }
+}
+.CV {
+  display: flex;
+  z-index: 2;
+  width: 90%;
+  @include media("<desktop") {
     flex-direction: column;
-    justify-content: center;
+    height: inherit;
+    width: 100%;
     align-items: center;
-    gap: 40px;
-}
-.cvSection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    @include media('<desktop'){
-        height: inherit;
-    }
-    @include media('<500px'){
-        width: 100%;
-    }
-    
-}
-.CV{
-    display: flex;
-    z-index: 2;
-    width: 90%;
-    @include media('<desktop'){
-        flex-direction: column;
-        height: inherit;
-        width: 100%;
-        align-items: center;
-        gap: 25px;
-    }
+    gap: 25px;
+  }
 }
 
-.cvHeader{
-    text-align: center;
-    background-color: #31313a;
+.cvHeader {
+  text-align: center;
+  background-color: #31313a;
+  border-radius: 5px;
+  color: white;
+  width: 25vw;
+  // min-width: 420px;
+  @include media("<1000px") {
+    min-width: 400px;
+  }
+  @include media("<400px") {
+    min-width: 100%;
+  }
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  @include media("<desktop") {
+    height: fit-content;
+  }
+
+  .headImg {
+    height: 325px;
+    background-image: url("../../Images/simple2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 48% 100%, 0 90%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .headContent {
+    padding: 10px;
+    display: grid;
+    gap: 0.8em;
+    > h1,
+    h3 {
+      font-weight: 400;
+    }
+    > h1 {
+      font-size: 2.25em;
+    }
+  }
+
+  .headBtnCon {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
     border-radius: 5px;
-    color: white;
-    width: 25vw;
-    // min-width: 420px;
-    @include media('<1000px'){
-        min-width: 400px;
+    > a {
+      padding: 1em;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-top: 1px solid #555;
+      background-color: #31313a;
+      color: white;
+      font-size: 1.125em;
+      transition: all 0.5s;
+      &:nth-child(1) {
+        border-right: 1px solid #555;
+        border-bottom-left-radius: 5px;
+      }
+      &:nth-child(2) {
+        border-bottom-right-radius: 5px;
+      }
+      &:hover {
+        color: #45f3ff;
+      }
     }
-    @include media('<400px'){
-        min-width: 100%;
-    }
-    height: 65vh;
+  }
+}
+
+.cvBody {
+  width: 35vw;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  @include media("<1000px") {
+    min-width: 400px;
+  }
+  @include media("<400px") {
+    min-width: 100%;
+  }
+  height: 60vh;
+  background-color: #31313a;
+  margin: auto;
+  padding: 1.5em;
+  box-sizing: border-box;
+  color: white;
+  overflow-y: scroll;
+  @include media("<desktop") {
+    min-height: 350px;
+  }
+}
+.cvBodySec {
+  margin-bottom: 2em !important;
+  > h2 {
+    font-weight: 500;
     display: flex;
     flex-direction: column;
-    @include media('<desktop'){
-        height: fit-content;
+    gap: 0.6em;
+    position: relative;
+    &::after {
+      content: "";
+      height: 1px;
+      background: linear-gradient(
+        75deg,
+        rgba(119, 119, 119, 1) 0%,
+        rgba(49, 49, 58, 1) 95%
+      );
+      width: 100%;
     }
-
-    .headImg{
-        height: 325px;
-        background-image: url('../../Images/simple2.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 48% 100%, 0 90%);    
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(
+        ellipse at left,
+        rgba(197, 202, 213, 0.15) 0%,
+        rgba(255, 255, 255, 0) 70%
+      );
     }
-
-    .headContent{
-        padding: 10px;
-        display: grid;
-        gap: .8em;
-        >h1,h3{
-            font-weight: 400;
-        }
-        >h1{
-            font-size: 2.25em;
-        }
-    }
-
-    .headBtnCon{
-        margin-top: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1px;
-        border-radius: 5px;
-        >button{
-            padding: 1em;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            border-top: 1px solid #555;
-            background-color: #31313a;
-            color: white;
-            font-size: 1.125em;
-            transition: all .5s;
-            &:nth-child(1){
-            border-right: 1px solid #555;
-            border-bottom-left-radius: 5px;
-            }
-            &:nth-child(2){
-            border-bottom-right-radius: 5px;
-            }
-            &:hover{
-                color: #45f3ff;
-            }
-        }
-        
-    }
+  }
+  p {
+    margin-top: 2em;
+    font-size: 1.125em;
+    line-height: 1.5em;
+  }
 }
 
-.cvBody{
-    width: 35vw;
-    // min-width: 420px;
-    @include media('<1000px'){
-        min-width: 400px;
+.skillWrapper {
+  padding: 1em 0;
+  > h3 {
+    font-weight: 500;
+  }
+  .iconWrapper {
+    padding: 0.25em 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    .svgColor {
+      filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(-210deg)
+        brightness(119%) contrast(119%);
     }
-    @include media('<400px'){
-        min-width: 100%;
-    }
-    height: 60vh;
-    background-color: #31313a;
-    margin: auto;
-    padding: 1.5em;
-    box-sizing: border-box;
-    color: white;
-    @include media('<desktop'){
-        overflow-y: scroll;
-        min-height: 350px;
-    }
-        
-}
-.cvBodySec{
-    >h2{
-        font-weight: 500;
-        display: flex;
-        flex-direction: column;
-        gap: .6em;
-        position: relative;
-        &::after{
-            content: '';
-            height: 1px;
-            background: linear-gradient(75deg, rgba(119,119,119,1) 0%, rgba(49,49,58,1) 95%);
-            width: 100%;
-        }
-        &::before{
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 0;
-            width: 30px;
-            height: 30px;
-            background: radial-gradient(ellipse at left,rgba(197,202,213,.15) 0%,rgba(255,255,255,0) 70%);
-        }
-    }
-    p{
-        margin-top: 2em;
-        font-size: 1.125em;
-        line-height: 2em;
-    }
+  }
 }

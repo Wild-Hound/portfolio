@@ -3,6 +3,7 @@ import styles from "./MainNav.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faBars } from "@fortawesome/free-solid-svg-icons";
 import { menuBtnAct } from "./MainNavMech";
+import resume from "../Images/yasin_khan.pdf";
 
 function MainNav() {
   return (
@@ -15,22 +16,22 @@ function MainNav() {
         <div className={styles.mainContent}>
           <ul className={styles.links}>
             <li className={styles.link}>
-              <a href="#">Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li className={styles.link}>
-              <a href="#">About</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li className={styles.link}>
-              <a href="#">Portfolio</a>
+              <a href="#about">About</a>
             </li>
             <li className={styles.link}>
-              <a href="#">Blog</a>
+              <a href="#blog">Blog</a>
             </li>
             <li className={styles.link}>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
-          <a href="#" className={styles.Resume}>
+          <a href={resume} target="_blank" className={styles.Resume}>
             Download Resume <FontAwesomeIcon icon={faDownload} />
           </a>
           <button
@@ -43,22 +44,24 @@ function MainNav() {
         <div id={styles.subMenu} style={{ display: "none" }}>
           <ul className={styles.subLinks}>
             <li className={styles.subLink}>
-              <a href="#">Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li className={styles.subLink}>
-              <a href="#">Home</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li className={styles.subLink}>
-              <a href="#">Home</a>
+              <a href="#about">About</a>
             </li>
             <li className={styles.subLink}>
-              <a href="#">Home</a>
+              <a href="#blog">Blog</a>
             </li>
             <li className={styles.subLink}>
-              <a href="#">Home</a>
+              <a href="#contact">Contact</a>
             </li>
             <li className={styles.resume}>
-              <a href="#">Download Resume</a>
+              <a href={resume} target="_blank">
+                Download Resume
+              </a>
             </li>
           </ul>
         </div>

@@ -11,17 +11,17 @@ function SocialBar() {
   return (
     <div className={styles.socialBarWrapper}>
       <div>
-        <a href="https://github.com/Wild-Hound">
+        <a href="https://github.com/Wild-Hound" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
       <div>
-        <a href="https://www.linkedin.com/in/yk404/">
+        <a href="https://www.linkedin.com/in/yk404/" target="_blank">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
       <div>
-        <a href="https://chatwith.io/s/yasin-khan">
+        <a href="https://chatwith.io/s/yasin-khan" target="_blank">
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
       </div>

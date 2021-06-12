@@ -3,17 +3,16 @@ import styles from "./BlogCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-function BlogCard() {
+function BlogCard({ blogLink, bgImg, title, parah }) {
   return (
     <div className={styles.blogCard}>
-      <div className={styles.imgCover}></div>
+      <div className={styles.imgCover}>
+        <img src={bgImg} />
+      </div>
       <div className={styles.content}>
-        <h3>Javascript Fundamentals</h3>
-        <p>
-          mainstream programming language it adapted itself to be like OPP &
-          Functional language. Since javascript does not force a specific
-        </p>
-        <a href="#">
+        <h3>{title}</h3>
+        <p>{parah}</p>
+        <a href={blogLink} target="_blank">
           View Blog <FontAwesomeIcon icon={faArrowRight} />
         </a>
       </div>

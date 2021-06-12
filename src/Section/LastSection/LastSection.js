@@ -3,7 +3,7 @@ import "./LastSection.scss";
 
 function LastSection() {
   return (
-    <div class="contain-sec">
+    <div class="contain-sec" id="contact">
       <form action="" class="conForm">
         <div class="formCon">
           <h2>Contact Me</h2>

@@ -11,7 +11,7 @@ function PortfolioSection() {
   }
 
   return (
-    <div>
+    <div id="portfolio">
       <h1 className="secHeader">Portfolio</h1>
       <div className={styles.portfolioWrapper}>
         <div className={styles.tagWrapper}>
