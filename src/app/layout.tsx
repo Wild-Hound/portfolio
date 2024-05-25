@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { Montserrat, Monda, Hind_Madurai } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const primary = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const secondary = Monda({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-monda",
+});
+
+const parah = Hind_Madurai({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-hind_madurai",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${primary?.variable} ${secondary?.variable} ${parah?.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
