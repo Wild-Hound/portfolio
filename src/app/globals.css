@@ -1,16 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   padding: 0;
-}
-
-.primary {
-  font-family: var(--font-montserrat);
-}
-
-.secondary {
-  font-family: var(--font-monda);
-}
-
-.parah {
-  font-family: var(--font-hind_madurai);
 }
