@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${primary?.variable} ${secondary?.variable} ${parah?.variable}`}
-        data-theme="retro"
+        data-theme="dracula"
       >
         {children}
       </body>
