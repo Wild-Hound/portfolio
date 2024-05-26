@@ -1,10 +1,10 @@
-import Image from "next/image";
+import TopBar from "@/Components/TopBar";
 
 export default function Home() {
   return (
     <main>
       <div className="font-primary">
-        <button className="btn w-64 rounded-full">Button</button>
+        <TopBar />
       </div>
     </main>
   );
