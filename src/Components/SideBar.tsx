@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type Props = {
   children: string | JSX.Element | JSX.Element[];
@@ -22,10 +23,7 @@ const SideBar: React.FC<Props> = ({ children }) => {
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
             {/* Sidebar content here */}
             <li>
-              <a>Sidebar Item 1</a>
-            </li>
-            <li>
-              <a>Sidebar Item 2</a>
+              <Link href="/newpage">New Page</Link>
             </li>
           </ul>
         </div>
