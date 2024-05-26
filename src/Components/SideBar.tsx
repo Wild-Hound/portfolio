@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-type Props = {
-  children: string | JSX.Element | JSX.Element[];
-};
+interface Props {
+  children: React.ReactNode;
+}
 
 const SideBar: React.FC<Props> = ({ children }) => {
   return (
