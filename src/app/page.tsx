@@ -1,3 +1,4 @@
+import SideBar from "@/Components/SideBar";
 import TopBar from "@/Components/TopBar";
 
 export default function Home() {
