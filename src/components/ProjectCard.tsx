@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -6,12 +7,14 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({ bg_color }) => {
   return (
-    <div
-      className={`flex justify-center items-center text-center h-[40rem] text-white text-[3rem] font-bold cursor-pointer`}
-      style={{ backgroundColor: bg_color }}
-    >
-      ProjectCard
-    </div>
+    <Link href="/projects/1">
+      <div
+        className={`flex justify-center items-center text-center h-[40rem] text-white text-[3rem] font-bold cursor-pointer`}
+        style={{ backgroundColor: bg_color }}
+      >
+        ProjectCard
+      </div>
+    </Link>
   );
 };
 
