@@ -121,11 +121,6 @@
   dependencies:
     glob "10.3.10"
 
-"@next/font@^14.2.3":
-  version "14.2.3"
-  resolved "https://registry.yarnpkg.com/@next/font/-/font-14.2.3.tgz#7b2e868a960cbe089f825b2e1e09e2933a04b9dc"
-  integrity sha512-u35UstQmvl3Yrvv2MOi6RcXMH3xDtmWTXcvkYcC/vCZHLqj/5JQ5UyFRf5saDWxFlZIkEh8HCzwNGoiHIr1/NQ==
-
 "@next/swc-darwin-arm64@14.2.3":
   version "14.2.3"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.3.tgz#db1a05eb88c0224089b815ad10ac128ec79c2cdb"
@@ -1356,6 +1351,11 @@ graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
+
+gsap@^3.12.5:
+  version "3.12.5"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.12.5.tgz#136c02dad4c673b441bdb1ca00104bfcb4eae7f4"
+  integrity sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==
 
 has-bigints@^1.0.1, has-bigints@^1.0.2:
   version "1.0.2"
