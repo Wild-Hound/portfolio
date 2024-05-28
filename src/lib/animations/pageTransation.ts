@@ -41,19 +41,19 @@ export const animatePageIn = () => {
   }
 };
 
-export const animatePageOut = (href: string, router: AppRouterInstance) => {
+export const animatePageOut = (onComplete: () => void) => {
   const { bannerOne, bannerTwo, bannerThree, bannerFour } = getBanners();
 
   if (bannerOne && bannerTwo && bannerThree && bannerFour) {
     const tl = gsap.timeline();
 
     tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 0,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: -100,
+    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
+      yPercent: 0,
       stagger: 0.2,
       onComplete: () => {
-        router.push(href);
+        onComplete();
       },
     });
   }

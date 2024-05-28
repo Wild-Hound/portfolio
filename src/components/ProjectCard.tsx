@@ -11,8 +11,7 @@ const ProjectCard: React.FC<Props> = ({ bg_color }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    console.log("click");
-    animatePageOut("/projects/1", router);
+    animatePageOut(() => router.push("/projects/1"));
   };
   return (
     <div onClick={handleClick}>

@@ -15,21 +15,8 @@ interface Props {
 const template: React.FC<Props> = ({ children }) => {
   const pathname = usePathname();
 
-  const showVerticalbarAnimation = () => {
-    console.log(pathname);
-    if (pathname.includes("projects")) {
-      return true;
-    }
-    return false;
-  };
-
   useEffect(() => {
-    console.log("yoyo");
-    if (showVerticalbarAnimation()) {
-      animatePageIn();
-    } else {
-      instantAnimateOut();
-    }
+    animatePageIn();
   }, []);
 
   return (
@@ -50,13 +37,8 @@ const template: React.FC<Props> = ({ children }) => {
         id="banner-4"
         className="min-h-screen bg-neutral-950 z-10 fixed top-0 left-3/4 w-1/4"
       />
-      <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeInOut", duration: 0.75 }}
-      >
-        {children}
-      </motion.div>
+
+      {children}
     </div>
   );
 };
