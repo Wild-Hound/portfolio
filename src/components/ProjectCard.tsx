@@ -4,9 +4,12 @@ import { animatePageOut } from "../lib/animations/pageTransation";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-interface Props {}
+interface Props {
+  imgSrc: string;
+  title: string;
+}
 
-const ProjectCard: React.FC<Props> = () => {
+const ProjectCard: React.FC<Props> = ({ imgSrc, title }) => {
   const router = useRouter();
 
   const handleClick = () => {
@@ -18,14 +21,14 @@ const ProjectCard: React.FC<Props> = () => {
         className={`flex justify-center items-center text-center h-[40rem] text-white text-[3rem] font-bold cursor-pointer relative filter-saturate-blur`}
       >
         <div className="z-10 glass-bg">
-          <div className="text-[3rem] font-secondary bg-base-100 py-3 px-8">
-            Project
+          <div className="text-[3rem] font-secondary bg-base-100 py-2 px-6">
+            {title}
           </div>
         </div>
         <Image
-          src="/photo1.avif"
+          src={imgSrc}
           layout="fill"
-          objectFit="fill"
+          objectFit="cover"
           alt="Picture of the author"
         />
       </div>
