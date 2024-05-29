@@ -8,10 +8,10 @@ export default function Home() {
       <div className="font-primary">
         <TopBar />
         <div className="grid grid-cols-2">
-          <ProjectCard bg_color="#4c3b4d" />
-          <ProjectCard bg_color="#c9eddc" />
-          <ProjectCard bg_color="#54645C" />
-          <ProjectCard bg_color="#6a706e" />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
       </div>
     </main>

@@ -44,7 +44,7 @@ const page = () => {
           </div>
         </div>
         <div className="w-1/3 min-w-[32rem] h-[100vh] overflow-y-scroll">
-          <div className="font-secondary font-semibold text-[5.5rem] mt-20 ml-10">
+          <div className="font-primary font-semibold text-[5.5rem] mt-20 ml-10">
             King game
           </div>
 

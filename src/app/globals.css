@@ -6,3 +6,29 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.filter-saturate-blur {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+.filter-saturate-blur:hover {
+  filter: none;
+  -webkit-filter: none;
+  > div {
+    backdrop-filter: none;
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+.glass-bg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  /* backdrop-filter: blur(10px); */
+  transition: 0.5s;
+}
