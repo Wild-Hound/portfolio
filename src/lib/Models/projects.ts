@@ -20,6 +20,7 @@ export const projects = [
         color: "oklch(var(--a))",
       },
     ],
+    preview: "/space_shooter_preview.mp4",
   },
   {
     id: 2,
@@ -42,5 +43,6 @@ export const projects = [
         color: "oklch(var(--a))",
       },
     ],
+    preview: "/stack_tower_preview.mp4",
   },
 ];

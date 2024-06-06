@@ -55,23 +55,25 @@ const page: React.FC<Props> = ({ params }) => {
                 {projectData?.live}
               </a>
             </div>
-            <div className="flex justify-center px-4 py-16 bg-base-200 relative h-full">
-              <Image
-                src="/fausto-montanari4.gif"
-                layout="fill"
-                objectFit="fill"
-                alt="Picture of the author"
+            <div className="flex justify-center px-4 bg-base-200 relative h-full">
+              <video
+                autoPlay
+                loop
+                muted
+                src={projectData?.preview}
+                className="object-cover"
               />
             </div>
           </div>
         </div>
         <div className="w-1/3 min-w-[32rem] h-[100vh] overflow-y-scroll">
-          <div className="font-primary font-semibold text-[5.5rem] mt-20 ml-10">
+          <div className="font-primary font-semibold text-[4rem] mt-20 ml-6">
             {projectData?.name}
           </div>
 
-          <div className="grid gap-4 mt-auto">
-            <SectionBox title="story">
+          <div className="grid gap-4 ">
+            <div className="mt-[1rem]" />
+            <SectionBox title="Story">
               <div className="font-parah text-[1.2rem]">
                 {projectData?.story}
               </div>
