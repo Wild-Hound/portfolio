@@ -14,6 +14,7 @@ export default function Home() {
                 imgSrc={project?.imgSrc}
                 title={project?.name}
                 key={index}
+                projectID={`${project?.id}`}
               />
             );
           })}

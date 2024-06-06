@@ -10,13 +10,14 @@ const { card, content, back, back_content } = styles;
 interface Props {
   imgSrc: string;
   title: string;
+  projectID: string;
 }
 
-const ProjectCard: React.FC<Props> = ({ imgSrc, title }) => {
+const ProjectCard: React.FC<Props> = ({ imgSrc, title, projectID }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    animatePageOut(() => router.push("/projects/1"));
+    animatePageOut(() => router.push(`/projects/${projectID}`));
   };
 
   return (
