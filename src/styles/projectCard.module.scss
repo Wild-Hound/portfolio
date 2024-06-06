@@ -36,7 +36,7 @@
   position: absolute;
   content: " ";
   display: block;
-  width: 360px;
+  width: 240px;
   height: 600%;
   background: linear-gradient(
     90deg,
@@ -47,7 +47,7 @@
     oklch(var(--p)),
     transparent
   );
-  animation: rotation_481 10000ms infinite linear;
+  animation: rotation_481 15000ms infinite linear;
 }
 
 .back_content {

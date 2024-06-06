@@ -2,6 +2,9 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { LiaBarsSolid } from "react-icons/lia";
 import SideBar from "./SideBar";
+import styles from "../styles/topbar.module.scss";
+
+const { glitch } = styles;
 
 const Topbar = () => {
   return (
@@ -14,7 +17,9 @@ const Topbar = () => {
         </SideBar>
       </div>
       <div className="flex-1 w-full">
-        <a className="text-center text-4xl w-full font-bold">Yasin Khan</a>
+        <div className={`${glitch} m-auto`} data-text="Yasin Khan">
+          Yasin Khan
+        </div>
       </div>
       <div className="flex-none">
         <button className="btn btn-square btn-ghost text-4xl">
