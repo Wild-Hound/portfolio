@@ -1,6 +1,6 @@
 export const projects = [
   {
-    imgSrc: "/darkShooter.png",
+    imgSrc: "/giphy.gif",
     name: "Kings Game",
   },
   {
