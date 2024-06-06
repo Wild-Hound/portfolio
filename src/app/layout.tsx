@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import { Montserrat, Monda, Hind_Madurai } from "next/font/google";
 
 const primary = Montserrat({
@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${primary?.variable} ${secondary?.variable} ${parah?.variable}`}
-        data-theme="dracula"
+        data-theme="night"
       >
         {children}
       </body>

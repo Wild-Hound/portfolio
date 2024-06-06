@@ -1,5 +1,4 @@
 import ProjectCard from "@/components/ProjectCard";
-import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
 import { projects } from "@/lib/Models/projects";
 
@@ -8,7 +7,7 @@ export default function Home() {
     <main>
       <div className="font-primary">
         <TopBar />
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-2 p-3">
           {projects?.map((project, index) => {
             return (
               <ProjectCard

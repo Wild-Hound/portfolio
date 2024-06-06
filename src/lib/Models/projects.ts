@@ -1,7 +1,7 @@
 export const projects = [
   {
-    imgSrc: "/giphy.gif",
-    name: "Kings Game",
+    imgSrc: "/darkShooter.png",
+    name: "Space Shooter",
   },
   {
     imgSrc: "/kingPlatform.png",
@@ -9,10 +9,10 @@ export const projects = [
   },
   {
     imgSrc: "/stack.png",
-    name: "Kings Game",
+    name: "Stack Tower",
   },
   {
     imgSrc: "/photo1.avif",
-    name: "Kings Game",
+    name: "Miami Beach",
   },
 ];

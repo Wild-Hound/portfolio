@@ -11,6 +11,12 @@ body {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   transition: 0.5s;
+  box-sizing: border-box;
+  overflow: hidden;
+  > img {
+    scale: 1.1;
+    transition: all 0.35s;
+  }
 }
 
 .filter-saturate-blur:hover {
@@ -19,6 +25,9 @@ body {
   > div {
     backdrop-filter: none;
     background: rgba(0, 0, 0, 0);
+  }
+  > img {
+    scale: 1;
   }
 }
 
@@ -29,6 +38,6 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.25);
-  /* backdrop-filter: blur(10px); */
   transition: 0.5s;
+  /* scale: 1.5; */
 }

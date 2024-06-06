@@ -23,7 +23,7 @@ const config: Config = {
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ["light", "dark", "retro", "dracula"],
+    themes: ["light", "dark", "retro", "night"],
   },
 };
 export default config;
