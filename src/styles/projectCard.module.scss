@@ -32,6 +32,12 @@
   overflow: hidden;
 }
 
+.back:hover {
+  &::before {
+    visibility: visible;
+  }
+}
+
 .back::before {
   position: absolute;
   content: " ";
@@ -47,6 +53,7 @@
     oklch(var(--p)),
     transparent
   );
+  visibility: hidden;
   animation: rotation_481 15000ms infinite linear;
 }
 

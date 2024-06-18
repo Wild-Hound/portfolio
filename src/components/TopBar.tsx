@@ -8,8 +8,8 @@ const { glitch } = styles;
 
 const Topbar = () => {
   return (
-    <div className="navbar h-24 p-8">
-      <div className="flex-none">
+    <div className="navbar h-24 p-8 bg-base-100 relative">
+      <div className="flex-none ">
         <SideBar>
           <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
             <LiaBarsSolid className="text-4xl" />
